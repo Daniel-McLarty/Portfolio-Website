@@ -20,9 +20,9 @@ This site was built using basic front-end technologies:
 - `JavaScript`
 
 It is fully responsive and optimized for desktop and mobile viewing.  
-You can find the live version here: [daniel.mclarty.tech](https://daniel.mclarty.tech)
-To generate a production version of the site yourself you can use the provided mover.ps1 script.
-The script does require you to use the minify extension in VS Code first as it expects \*.min.\* files for the main website files.
+You can find the live version here: [daniel.mclarty.tech](https://daniel.mclarty.tech)  
+To generate a production version of the site yourself you can use the provided mover.ps1 script.  
+The script does require you to use the minify extension in VS Code first as it expects \*.min.\* files for the main website files.  
 
 ---
 
