@@ -22,25 +22,33 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 #>
 
-# Create prod folder if it doesn't exist
-$dest = ".\prod"
-if (-Not (Test-Path $dest)) {
-    New-Item -ItemType Directory -Path $dest | Out-Null
+# Create prod and prod\assets folders if they don't exist
+$prodDir = ".\prod"
+$prodAssetsDir = Join-Path $prodDir "assets"
+
+if (-not (Test-Path $prodDir)) {
+    New-Item -ItemType Directory -Path $prodDir | Out-Null
 }
 
-# Define the files to move (source -> destination)
-$files = @{
-    ".\src\index.min.html"  = ".\prod\index.html"
-    ".\src\styles.min.css"  = ".\prod\styles.css"
-    ".\src\script.min.js"   = ".\prod\script.js"
+if (-not (Test-Path $prodAssetsDir)) {
+    New-Item -ItemType Directory -Path $prodAssetsDir | Out-Null
 }
 
-foreach ($src in $files.Keys) {
-    $destFile = $files[$src]
-    if (Test-Path $src) {
-        Move-Item -Path $src -Destination $destFile -Force
-        Write-Host "Moved $src -> $destFile"
-    } else {
-        Write-Warning "File not found: $src"
-    }
+# Copy all .min.* files from src to prod, renaming to strip ".min"
+Get-ChildItem -Path .\src\ -Filter "*.min.*" | ForEach-Object {
+    $srcPath = $_.FullName
+    $filename = $_.Name -replace '\.min(?=\.)', ''  # Remove .min before extension
+    $destPath = Join-Path $prodDir $filename
+
+    Copy-Item -Path $srcPath -Destination $destPath -Force
+    Write-Host "Copied $srcPath -> $destPath"
+}
+
+# Copy all assets from src\assets to prod\assets
+$srcAssets = ".\src\assets"
+if (Test-Path $srcAssets) {
+    Copy-Item -Path "$srcAssets\*" -Destination $prodAssetsDir -Recurse -Force
+    Write-Host "Copied assets -> $prodAssetsDir"
+} else {
+    Write-Warning "Assets folder not found: $srcAssets"
 }
