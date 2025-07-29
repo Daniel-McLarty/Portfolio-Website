@@ -22,17 +22,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 #>
 
-# Create prod and prod\assets folders if they don't exist
+#Set the prod directory and prod/assets directory
 $prodDir = ".\prod"
 $prodAssetsDir = Join-Path $prodDir "assets"
 
-if (-not (Test-Path $prodDir)) {
-    New-Item -ItemType Directory -Path $prodDir | Out-Null
+# Remove prod directory if it exists to start clean
+if (Test-Path $prodDir) {
+    Remove-Item -Path $prodDir -Recurse -Force
+    Write-Host "Deleted existing $prodDir folder to start fresh."
 }
 
-if (-not (Test-Path $prodAssetsDir)) {
-    New-Item -ItemType Directory -Path $prodAssetsDir | Out-Null
-}
+# Recreate prod and prod\assets folders
+New-Item -ItemType Directory -Path $prodDir | Out-Null
+New-Item -ItemType Directory -Path $prodAssetsDir | Out-Null
 
 # Copy all .min.* files from src to prod, renaming to strip ".min"
 Get-ChildItem -Path .\src\ -Filter "*.min.*" | ForEach-Object {
@@ -51,4 +53,17 @@ if (Test-Path $srcAssets) {
     Write-Host "Copied assets -> $prodAssetsDir"
 } else {
     Write-Warning "Assets folder not found: $srcAssets"
+}
+
+# Copy robots.txt and sitemap.xml from src to prod (if they exist)
+$filesToMove = @("robots.txt", "sitemap.xml")
+foreach ($file in $filesToMove) {
+    $srcFile = Join-Path ".\src" $file
+    $destFile = Join-Path $prodDir $file
+    if (Test-Path $srcFile) {
+        Copy-Item -Path $srcFile -Destination $destFile -Force
+        Write-Host "Copied $srcFile -> $destFile"
+    } else {
+        Write-Warning "$file not found in src directory."
+    }
 }
