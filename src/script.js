@@ -1,4 +1,4 @@
-/*
+/*!@license
   MIT License
 
   Copyright (c) 2025 Daniel McLarty
