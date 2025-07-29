@@ -8,7 +8,7 @@ The site serves as an online portfolio to showcase my skills, interests, and pro
 ## About Me
 
 Hi, I'm **Daniel McLarty**, a freshman studying **Network Management and Cybersecurity** at **AB-Tech**.  
-While I currently have minimal real-world experience in the field, I'm actively building my knowledge through coursework, personal projects, and hands-on learning — this website is part of that journey.
+While I currently have minimal real-world experience in the field, I'm actively building my knowledge through coursework, personal projects, and hands-on learning, this website is part of that journey.
 
 ---
 
