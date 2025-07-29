@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel McLarty | Cybersecurity & Networking</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+
+<body>
+  <header>
+    <h1>Daniel McLarty</h1>
+    <p>Freshman in Networking & Cybersecurity</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Daniel, a freshman at AB-Tech passionate about cybersecurity, ethical hacking, and network
+        infrastructure. I'm building a future in digital defense and secure systems.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Core Skills & Work History</h2>
+      <ul>
+        <li>Networking fundamentals (TCP/IP, DNS, etc.)</li>
+        <li>Cybersecurity concepts (CIA triad, threat modeling)</li>
+        <li>Basic scripting (Bash, Python)</li>
+        <li>Hands-on labs with Cisco Packet Tracer & Wireshark</li>
+        <li>Sales & Customer Engagement</li>
+        <li>Currently employed at Best Buy as a top proforming sales advisor</li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <a href="assets/resume.pdf" download class="btn">Download My Resume</a>
+    </section>
+
+    <section id="external">
+      <h2>Other Platforms</h2>
+      <ul>
+        <li>
+          <a href="https://linkedin.com/in/daniel-mclarty-709a6b34b">Linked In</a>
+        </li>
+        <li>
+          <a href="https://gitlab.com/savagedevs">GitLab</a>
+        </li>
+        <li>
+          <a href="https://github.com/Daniel-McLarty">GitHub</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Work Samples</h2>
+      <div class="gallery">
+        <div class="project">
+          <img src="assets/network-diagram.png" alt="Sample Network Diagram" />
+          <p>Network diagram for my homelab as of 7/8/2025</p>
+          <p>You can download the draw.io XML <a href="assets/network.drawio.xml">here</a></p>
+        </div>
+        <div class="project">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Placeholder Video" frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>Speech on Password Security</p>
+        </div>
+        <div class="project">
+          <div class="download-box">
+            <p><strong>Packet Tracer Capstone Lab</strong></p>
+            <p>In this lab I set up a full network, complete with:</p>
+            <ul>
+              <li>Multiple VLANs</li>
+              <li>Router on a Stick</li>
+              <li>Trunking</li>
+              <li>Etherchannel</li>
+              <li>IPv4/IPv6 Dual Stack</li>
+              <li>Default Routing</li>
+              <li>SSH Config</li>
+              <li>Security Hardening</li>
+              <li>IPv4 DHCP Pools</li>
+            </ul>
+            <p>Download the full project files (ZIP)</p>
+            <a href="assets/packet-tracer-lab.zip" class="btn download-btn" download>
+              ⬇️ Download ZIP
+            </a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="download-box">
+            <p><strong>NATSAP: NAT Sub-Address Protocol (I-D Draft)</strong></p>
+            <p>
+              Proposed a Layer 5 encapsulation protocol to improve communication with devices behind Carrier-Grade NAT.
+              Features dynamic sub-addressing, DNS integration, and backward compatibility with IPv4.
+            </p>
+            <ul>
+              <li>Designed a new protocol header and socket addressing scheme</li>
+              <li>Defined Dynamic Sub-Address Assignment Protocol (DSAAP)</li>
+              <li>Published as an Internet-Draft in the IETF format</li>
+              <li>Source & documentation on <a href="https://github.com/Daniel-McLarty/NAT-Sub-Address-Protocol"
+                  target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <p>
+              View the full draft: <a href="https://datatracker.ietf.org/doc/draft-mclarty-nat-sub-address-protocol/"
+                target="_blank" rel="noopener noreferrer">IETF Datatracker page</a>
+            </p>
+          </div>
+        </div>
+        <!-- Add more .project divs as needed -->
+      </div>
+    </section>
+
+    <section id="form" class="contact-form">
+      <h2>Get in Touch</h2>
+      <div class="contact-form">
+        <form id="contact-form" action="https://formsubmit.co/c743fe687f0a129fd73d56f9f8673d07" method="POST"
+          target="_blank" rel="noopener noreferrer">
+          <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" autocomplete="email"
+            required>
+          <textarea name="message" placeholder="Feel free to ask me anything!" required></textarea>
+          <input type="hidden" name="_autoresponse"
+            value="Thank you for reaching out, I will respond as quick as I can.">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New submission!">
+          <button type="submit">Send</button>
+        </form>
+        <p id="form-status" class="note" style="display: none; color: #66ff66;" aria-live="polite">✅ Message sent! I
+          will respond as quick as I can.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Daniel McLarty. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
