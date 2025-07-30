@@ -28,13 +28,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Daniel McLarty - Freshman Networking & Cybersecurity student showcasing skills, projects, and portfolio in cybersecurity, ethical hacking, and network infrastructure.">
+  <meta name="description"
+    content="Daniel McLarty - Freshman Networking & Cybersecurity student showcasing skills, projects,
+    and portfolio in cybersecurity, ethical hacking, and network infrastructure.">
   <meta property="og:title" content="Daniel McLarty | Cybersecurity & Networking" />
-  <meta property="og:description" content="Explore Daniel McLarty’s portfolio and projects in cybersecurity and networking." />
+  <meta property="og:description"
+    content="Explore Daniel McLarty’s portfolio and projects in cybersecurity and networking." />
   <meta property="og:url" content="https://daniel.mclarty.tech" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://daniel.mclarty.tech/" />
   <link rel="preload" href="assets/network-diagram.webp" as="image" />
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
 
   <title>Daniel McLarty | Cybersecurity & Networking</title>
 
@@ -53,7 +57,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/jetbrains.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 </head>
@@ -117,15 +121,15 @@
         <h2>Work Samples</h2>
         <div class="gallery">
           <div class="project">
-            <img src="assets/network-diagram.webp" alt="Sample Network Diagram" />
+            <img src="assets/network-diagram.webp" alt="Sample Network Diagram" loading="lazy" />
             <p>Network diagram for my homelab as of 7/8/2025</p>
-            <p>You can download the draw.io XML <a href="assets/network.drawio.xml">here</a></p>
+            <p>Here is the <a href="assets/network.drawio.xml">draw.io XML file</a> for the diagram</p>
           </div>
 
           <div class="project">
             <div class="video-wrapper">
-              <iframe src="https://www.youtube.com/embed/D7q-3hdKTm4" title="Password Security Speech" frameborder="0"
-                allowfullscreen></iframe>
+              <iframe loading="lazy" src="https://www.youtube.com/embed/D7q-3hdKTm4" title="Password Security Speech"
+                frameborder="0" allowfullscreen></iframe>
             </div>
             <p>Speech on Password Security</p>
           </div>
@@ -198,8 +202,9 @@
   </div>
 
   <footer role="contentinfo">
-    <p>© 2025 Daniel McLarty. All rights reserved. | The repository for the website can be found
-      <a href="https://github.com/Daniel-McLarty/Portfolio-Website" target="_blank" rel="noopener noreferrer">here</a>
+    <p>© 2025 Daniel McLarty. All rights reserved. |
+      <a href="https://github.com/Daniel-McLarty/Portfolio-Website" target="_blank" rel="noopener noreferrer">The code
+        for this website is on GitHub.</a>
     </p>
   </footer>
 

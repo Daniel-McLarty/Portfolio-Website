@@ -19,4 +19,10 @@ Allow: /
 User-agent: Yandex
 Allow: /
 
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
 Sitemap: https://daniel.mclarty.tech/sitemap.xml
