@@ -61,6 +61,12 @@
   --transition-fast: 0.2s ease-in-out;
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/jetbrains.woff2') format('woff2');
+  font-display: swap;
+}
+
 /* ==========================
    Base Styles & Typography
 ========================== */
